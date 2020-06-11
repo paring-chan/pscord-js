@@ -1,0 +1,43 @@
+{
+  "name": "pscord",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node bin/run",
+    "dev": "cross-env DEBUG=pscord:* nodemon bin/run"
+  },
+  "dependencies": {
+    "@decorators/express": "^2.3.0",
+    "@discordjs/opus": "^0.3.2",
+    "axios": "^0.19.2",
+    "btoa": "^1.2.1",
+    "connect-redis": "^4.0.4",
+    "cookie-parser": "~1.4.4",
+    "cross-env": "^7.0.2",
+    "debug": "~2.6.9",
+    "discord-paginationembed": "^2.0.0",
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0",
+    "express": "~4.16.1",
+    "express-session": "^1.17.1",
+    "ffmpeg-static": "^4.2.2",
+    "form-data": "^3.0.0",
+    "http-errors": "^1.7.3",
+    "miniget": "^2.0.0",
+    "mongoose": "^5.9.18",
+    "morgan": "~1.9.1",
+    "node-fetch": "^2.6.0",
+    "node-sass-middleware": "0.11.0",
+    "npm": "^6.14.5",
+    "opusscript": "^0.0.7",
+    "pug": "^3.0.0",
+    "redis": "^3.0.2",
+    "snekfetch": "^4.0.4",
+    "ytdl-core": "^2.1.7",
+    "ytsr": "^0.1.15"
+  },
+  "devDependencies": {
+    "ioredis": "^4.17.3",
+    "nodemon": "^2.0.4"
+  }
+}

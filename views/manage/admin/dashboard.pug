@@ -1,0 +1,22 @@
+extends ../../layout
+block content
+    h4 기능 관리
+    .card-columns
+        .card
+            .card-body.navbar
+                i.fas.fa-music &nbsp;음악
+                .custom-control.custom-switch
+                    input(type='checkbox', data-switch='music', checked=data.music).custom-control-input.pscord-switch#music-switch
+                    label.custom-control-label(for="music-switch")
+        .card
+            .card-body.navbar
+                i.fas.fa-user &nbsp;프로필
+                .custom-control.custom-switch
+                    input(type='checkbox', data-switch='profile', checked=data.profile).custom-control-input.pscord-switch#profile-switch
+                    label.custom-control-label(for="profile-switch")
+    script
+        | $(document).ready(() => {
+        |   $('.pscord-switch').change(function() {
+        |       window.location.href = `${window.location.pathname}switch/${$(this).data('switch')}/${this.checked}`
+        |   })
+        | })

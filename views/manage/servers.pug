@@ -1,0 +1,8 @@
+extends ../layout
+block content
+    ul.list-group
+        each guild in guilds
+            if guild.permissions & 8
+                a(href=`/servers/${guild.id}`, style="text-decoration: none;")
+                    li.list-group-item
+                        | #{guild.name}
