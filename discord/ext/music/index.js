@@ -118,13 +118,11 @@ function play(guild, song) {
         return;
     }
 
-    ytdl(song.url).pipe(fs.createWriteStream(`songs/${serverQueue.textChannel.guild.id}`))
-
     const dispatcher = serverQueue.connection
-        .play(`songs/${serverQueue.textChannel.guild.id}`)
+        .play(ytdl(song.url))
         .on("finish", async () => {
             serverQueue.songs.shift();
-            play(guild, await serverQueue.songs[0].pipe(fs.createWriteStream(`songs/${serverQueue.textChannel.guild.id}.mp3`)));
+            play(guild, serverQueue.songs[0]);
         })
         .on("error", error => console.error(error));
     dispatcher.setVolumeLogarithmic(serverQueue.volume / 5);
