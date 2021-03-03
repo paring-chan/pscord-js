@@ -30,7 +30,7 @@
     "node-sass-middleware": "0.11.0",
     "npm": "^6.14.5",
     "opusscript": "^0.0.7",
-    "pug": "^3.0.0",
+    "pug": "^3.0.1",
     "redis": "^3.0.2",
     "snekfetch": "^4.0.4",
     "ytdl-core": "^2.1.7",
